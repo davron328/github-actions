@@ -1,8 +1,13 @@
 name: Actions Workflow
 
 on:
-  # push:
-  pull_request:
+  push:
+    branches:
+      - master
+      - 'feature/*'  # any push to branch that starts with feature/ will trigger the workflow
+      # - 'feature/**' # feature/fix/b
+
+  # pull_request:
     
 
 jobs:
